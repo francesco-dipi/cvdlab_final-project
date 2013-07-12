@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js' ></script>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Cvdlab final-project : Interior design products - George Nelson" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+
+<script type='text/javascript'>
+$(document).ready(function(){
+
+$("img.a").hover(
+function() {
+$(this).stop().animate({"opacity": "0"}, "slow");
+},
+function() {
+$(this).stop().animate({"opacity": "1"}, "slow");
+});
+
+$("img.big").hover(
+function() {
+$(this).stop().animate({"opacity": "0.5"}, "slow");
+},
+function() {
+$(this).stop().animate({"opacity": "1"}, "slow");
+});
+
+});
+</script>
+<style>
+div.fadehover {
+	position: relative;
+	}
+
+img.a {
+	position: relative;
+	left: 0;
+	top: 0;
+        z-index: 10;
+	}
+.nav-fade li {
+/*    background: #fff; */
+   font-size: 16px;
+   color: rgb(150, 150, 150);
+   max-width: 800px;
+   padding: 3px 8px;
+   display: inline-block;
+   transition: background .45s ease-in-out;
+   -moz-transition: background .45s ease-in-out;
+   -webkit-transition: background .45s ease-in-out;
+   }
+
+.nav-fade li:hover {
+      background: #f2f2f2;
+/*       background: #212121; */
+      }
+            
+</style>
+
+
+<title>Cvdlab final-project | Cigar Lamp</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner" style="padding: 50px 10px 0px;"   >
+          <a id="forkme_banner" href="https://github.com/francesco-dipi/cvdlab_final-project">View on GitHub</a>
+
+          <h1 id="project_title">George Nelson Design</h1>
+          <h2 id="project_tagline">Computational Graphic - final project | Francesco Di Paolo 413937</h2>
+          </header><header>
+          <span style="text-align: center">
+          <h4>
+          <ul class="nav-fade">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="nelson.html">George Nelson</a></li>
+            <li><a href="lamp.html">Cigar Lamp</a></li>
+            <li><a href="sofa.html">Marshmallow Sofa</a></li>
+            <li><a href="bench.html">Platform Bench</a></li>
+            <li><a href="clock.html">Sunflower Clock</a></li>
+            <li><a href="scene.html">Composition</a></li>
+            <li><a href="util.html">Util Functions</a></li>
+          </ul>
+          </h4>
+          </span>
+          </header><header class="inner" style="padding: 0px 10px 30px;">
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/francesco-dipi/cvdlab_final-project/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/francesco-dipi/cvdlab_final-project/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<!--<a name="interior-design-works-by-george-nelson" class="anchor" href="#interior-design-works-by-george-nelson"><span class="octicon octicon-link"></span></a>Interior design works by <a href="http://en.wikipedia.org/wiki/George_Nelson_(designer)">George Nelson</a></h1>
+
+<h2 style="text-align: center;">
+<a name="francesco-di-paolo---413937" class="anchor" href="#francesco-di-paolo---413937"><span class="octicon octicon-link"></span></a>Francesco Di Paolo - 413937<br></h2>-->
+
+<h2>
+<a name="cigar-lamp" class="anchor" href="#cigar-lamp"><span class="octicon octicon-link"></span></a>Cigar Floor Lamp</h2>
+
+<strong>Measurements:</strong><br>
+Small: H 54" Diameter 10" Cord L 72"<br>
+Medium: H 59" Diameter 11.5" Cord L 72"<br>
+Large: H 63.5" Diameter 14" Cord L 72"<br>
+<br>
+<hr>
+George Nelson's Cigar Lamp(1947) is one of the most popular lamps in the George Nelson Bubble Lamp collection and a Stardust Staff Pick.  Part of the permanent collection of New York's Museum of Modern Art, these stylish modern cigar-shaped light fixtures have stood the test of time. They are constructed of a steel wire frame and covered with translucent plastic to emit a soft, even light. The George Nelson Cigar Bubble Lamp is a beloved icon of mid-century modern design and sets the right mood in any interior space.  George Nelson designed the Bubble Lamp collection for Howard Miller in 1947, the Cigar Lamp is available in three sizes.
+<!-- <img alt="Cigar Floor Lamp" src="images/Photos/LampPhoto.jpeg"/> -->
+<img alt="Cigar Floor Lamp" src="images/Photos/CigarLamp.jpg"/>
+<blockquote>“When you put a light in it, it glowed.”</blockquote>
+
+<h3>Modeling</h3>
+The model of the Cigar Lamp is composed by three parts:<br>
+The <strong>lamp base</strong> is the structure of the lamp and has been created using the function <a href="util.html#rotational_solid">ROTATIONAL_SOLID</a> starting from the profile points.
+
+<div class="fadehover" style="background-image: url(images/ScreenShots/LampBasePlasmJs320.jpeg); height: 350px; width: 320px; border: 1px solid black; float: left" ><a href="images/ScreenShots/LampBaseProfilePlasmJs.jpeg">
+<img src="images/ScreenShots/LampBaseProfilePlasmJs320.jpeg" alt="Cigar Lamp Base" class="a" style="padding: 0px; margin: 0px 0px; border: 0px" /></a>
+</div>
+
+<a href="images/ScreenShots/CigarLampBasePyPlasm.jpeg">
+<div class="fadehover" style="background-image: url(images/ScreenShots/LampBasePyPlasm320.jpeg); height: 350px; width: 320px; border: 1px solid black; float: right" >
+</div>
+</a>
+
+
+<br>
+The <strong>shade</strong> is generated rotating a curve using the ROTATIONAL_SURFACE function.
+
+<div class="fadehover" style="background-image: url(images/ScreenShots/LampShadePlasmJs320.jpeg); height: 350px; width: 320px; border: 1px solid black; float: left" ><a href="images/ScreenShots/LampShadePlasmJs.jpeg">
+<img src="images/ScreenShots/LampShadeProfilePlasmJs320.jpeg" alt="Cigar Lamp Shade" class="a" style="padding: 0px; margin: 0px 0px; border: 0px" /></a>
+</div>
+
+
+<a href="images/ScreenShots/CigarLampShade1PyPlasm.jpeg">
+<div class="fadehover" style="background-image: url(images/ScreenShots/LampShadePyPlasm320.jpeg); height: 350px; width: 320px; border: 1px solid black; float: right" >
+</div>
+</a>
+
+
+<br>
+The <strong>shade structure</strong> is generated duplicating and rotating a NUBSPLINE with the function <a href="util.html#DUPLIROT">DUPLIROT</a>.
+<br>
+
+
+<a href="images/ScreenShots/CigarLampShade2PlasmJs.jpeg">
+<div class="fadehover" style="background-image: url(images/ScreenShots/LampShade2PlasmJs320.jpeg); height: 350px; width: 320px; border: 1px solid black; float: left" >
+</div>
+</a>
+
+<a href="images/ScreenShots/CigarLampShade2PyPlasm.jpeg">
+<div class="fadehover" style="background-image: url(images/ScreenShots/LampShade2PyPlasm320.jpeg); height: 350px; width: 320px; border: 1px solid black; float: right" >
+</div>
+</a>
+
+<h3>Model</h3>
+<a href="images/ScreenShots/CigarLampPyPlasmWire.jpeg" ><img src="images/ScreenShots/CigarLampPyPlasmWire.jpeg"></a>
+<a href="images/ScreenShots/CigarLampUpPlasmJs.jpeg" ><img src="images/ScreenShots/CigarLampUpPlasmJs.jpeg"></a>
+<a href="images/ScreenShots/CigarLampDownPlasmJs.jpeg" ><img src="images/ScreenShots/CigarLampDownPlasmJs.jpeg"></a>
+
+
+
+
+<h3>Code</h3>
+<ul>
+<li>Plasm.js code - show model
+<li>PyPlasm code
+</ul>
+
+
+
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Cvdlab final-project maintained by <a href="https://github.com/francesco-dipi">francesco-dipi</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>

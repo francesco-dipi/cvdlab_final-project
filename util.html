@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js' ></script>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Cvdlab final-project : Interior design products - George Nelson" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+
+<script type='text/javascript'>
+$(document).ready(function(){
+
+$("img.a").hover(
+function() {
+$(this).stop().animate({"opacity": "0"}, "slow");
+},
+function() {
+$(this).stop().animate({"opacity": "1"}, "slow");
+});
+
+$("img.big").hover(
+function() {
+$(this).stop().animate({"opacity": "0.5"}, "slow");
+},
+function() {
+$(this).stop().animate({"opacity": "1"}, "slow");
+});
+
+});
+</script>
+<style>
+div.fadehover {
+	position: relative;
+	}
+
+img.a {
+	position: relative;
+	left: 0;
+	top: 0;
+        z-index: 10;
+	}
+.nav-fade li {
+/*    background: #fff; */
+   font-size: 16px;
+   color: rgb(150, 150, 150);
+   max-width: 800px;
+   padding: 3px 8px;
+   display: inline-block;
+   transition: background .45s ease-in-out;
+   -moz-transition: background .45s ease-in-out;
+   -webkit-transition: background .45s ease-in-out;
+   }
+
+.nav-fade li:hover {
+      background: #f2f2f2;
+/*       background: #212121; */
+      }
+            
+</style>
+
+
+<title>Cvdlab final-project | Util Functions</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner" style="padding: 50px 10px 0px;"   >
+          <a id="forkme_banner" href="https://github.com/francesco-dipi/cvdlab_final-project">View on GitHub</a>
+
+          <h1 id="project_title">George Nelson Design</h1>
+          <h2 id="project_tagline">Computational Graphic - final project | Francesco Di Paolo 413937</h2>
+          </header><header>
+          <span style="text-align: center">
+          <h4>
+          <ul class="nav-fade">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="nelson.html">George Nelson</a></li>
+            <li><a href="lamp.html">Cigar Lamp</a></li>
+            <li><a href="sofa.html">Marshmallow Sofa</a></li>
+            <li><a href="bench.html">Platform Bench</a></li>
+            <li><a href="clock.html">Sunflower Clock</a></li>
+            <li><a href="scene.html">Composition</a></li>
+            <li><a href="util.html">Util Functions</a></li>
+          </ul>
+          </h4>
+          </span>
+          </header><header class="inner" style="padding: 0px 10px 30px;">
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/francesco-dipi/cvdlab_final-project/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/francesco-dipi/cvdlab_final-project/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<!--<a name="interior-design-works-by-george-nelson" class="anchor" href="#interior-design-works-by-george-nelson"><span class="octicon octicon-link"></span></a>Interior design works by <a href="http://en.wikipedia.org/wiki/George_Nelson_(designer)">George Nelson</a></h1>
+
+<h2 style="text-align: center;">
+<a name="francesco-di-paolo---413937" class="anchor" href="#francesco-di-paolo---413937"><span class="octicon octicon-link"></span></a>Francesco Di Paolo - 413937<br></h2>-->
+
+<h2>
+<a name="util-functions" class="anchor" href="#util-functions"><span class="octicon octicon-link"></span></a>Util Functions</h2>
+
+In this page are presented some util functions used model the objects in Plasm.js and PyPlasm. The functions follow the same conventions of the PLaSM language: they have upper-case name and functional signature, with a single argument.
+
+
+<a name="aapoints" class="anchor" href="#aapoints"><span class="octicon octicon-link"><h3>AAPOINTS</h3></span></a>
+This function is similar to the PLaSM's AA function, but apply a function to a list of points.
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">AAPOINTS</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">func</span><span class="p">){</span>
+	<span class="cm">/*</span>
+<span class="cm">	Apply a function to all points</span>
+<span class="cm">	usage:</span>
+<span class="cm">	AAPOINTS(func)(parameters)(points)</span>
+<span class="cm">	e.g.: AAPOINTS(SUM)([1,.3,10])([[0,0,0],[1,0,3],[2,0,9]])</span>
+<span class="cm">	*/</span>
+	<span class="k">return</span> <span class="kd">function</span><span class="p">(</span><span class="nx">operands</span><span class="p">){</span> <span class="k">return</span> <span class="kd">function</span><span class="p">(</span><span class="nx">args</span><span class="p">){</span> <span class="k">return</span> <span class="nx">AA</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">list</span><span class="p">){</span>
+		<span class="kd">var</span> <span class="nx">res</span> <span class="o">=</span> <span class="p">[];</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">list</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span>
+			<span class="nx">res</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">func</span><span class="p">([</span><span class="nx">operands</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span><span class="nx">list</span><span class="p">[</span><span class="nx">i</span><span class="p">]]));</span>
+		<span class="k">return</span> <span class="nx">res</span><span class="p">;</span>
+	<span class="p">})(</span><span class="nx">args</span><span class="p">);}}</span>
+<span class="p">};</span></code></pre></div>
+
+<a name="mirror" class="anchor" href="#mirror"><span class="octicon octicon-link"><h3>MIRROR</h3></span></a>
+This function mirror an object along an axis
+
+<div class="highlight"><pre><code class="javascript">
+<span class="kd">var</span> <span class="nx">MIRROR</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">axis</span><span class="p">){</span>
+	<span class="cm">/**</span>
+<span class="cm">	 * reflect an object along an axis</span>
+<span class="cm">	 */</span>
+	<span class="k">return</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">obj</span><span class="p">)</span> <span class="p">{</span><span class="k">return</span> <span class="nx">STRUCT</span><span class="p">([</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">S</span><span class="p">([</span><span class="nx">axis</span><span class="p">])([</span><span class="o">-</span><span class="mi">1</span><span class="p">])(</span><span class="nx">obj</span><span class="p">)])}</span>
+<span class="p">};</span></code></pre></div>
+
+
+<a name="duplirot" class="anchor" href="#duplirot"><span class="octicon octicon-link"><h3>DUPLIROT</h3></span></a>
+This function duplicate and rotate an object
+
+<div class="highlight"><pre><code class="javascript">
+<span class="kd">var</span> <span class="nx">DUPLIROT</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">axis</span><span class="p">){</span>
+	<span class="cm">/*</span>
+<span class="cm">	Rotate end create n copies of an hpc object.</span>
+<span class="cm">	Usage: DUPLIROT([axis, axis])(angle)(object)(number)</span>
+<span class="cm">	*/</span>
+	<span class="c1">// In python it was a oneliner... :(</span>
+	<span class="k">return</span> <span class="kd">function</span><span class="p">(</span><span class="nx">alpha</span><span class="p">){</span> <span class="k">return</span> <span class="kd">function</span><span class="p">(</span><span class="nx">obj</span><span class="p">){</span> <span class="k">return</span> <span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span>
+		<span class="kd">var</span> <span class="nx">res</span> <span class="o">=</span> <span class="p">[];</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">n</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span>
+			<span class="nx">res</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">R</span><span class="p">(</span><span class="nx">axis</span><span class="p">)(</span><span class="nx">alpha</span><span class="o">*</span><span class="nx">i</span><span class="p">)(</span><span class="nx">obj</span><span class="p">));</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+		<span class="k">return</span> <span class="nx">STRUCT</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+	<span class="p">}</span> <span class="p">}</span> <span class="p">}</span>
+<span class="p">};</span></code></pre></div>
+
+
+<a name="rotational_solid" class="anchor" href="#rotational_solid"><span class="octicon octicon-link"><h3>ROTATIONAL_SOLID</h3></span></a>
+
+From a list of points it creates a rotational surface that pass through all the points.
+
+<div class="highlight"><pre><code class="javascript">
+<span class="kd">var</span> <span class="nx">ROTATIONAL_SOLID</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">points</span><span class="p">){</span>
+	<span class="cm">/*</span>
+<span class="cm">	Similar to ROTATIONAL_SURFACE but takes points, not curves.</span>
+<span class="cm">	*/</span>
+	<span class="k">return</span> <span class="kd">function</span><span class="p">(</span><span class="nx">angle</span><span class="p">){</span> <span class="k">return</span> <span class="kd">function</span><span class="p">(</span><span class="nx">divs</span><span class="p">){</span>
+		<span class="kd">var</span> <span class="nx">domain</span> <span class="o">=</span> <span class="nx">PROD1x1</span><span class="p">([</span><span class="nx">INTERVALS</span><span class="p">(</span><span class="nx">points</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span><span class="p">)(</span><span class="nx">points</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="nx">INTERVALS</span><span class="p">(</span><span class="nx">angle</span><span class="p">)(</span><span class="nx">divs</span><span class="p">)]);</span>
+		<span class="kd">var</span> <span class="nx">profile</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">points</span><span class="p">[</span><span class="nx">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]];}</span>
+		<span class="k">return</span> <span class="nx">MAP</span><span class="p">(</span><span class="nx">ROTATIONAL_SURFACE</span><span class="p">(</span><span class="nx">profile</span><span class="p">))(</span><span class="nx">domain</span><span class="p">);</span>
+	<span class="p">}}</span>
+<span class="p">};</span></code></pre></div>
+
+
+<a name="torus" class="anchor" href="#torus"><span class="octicon octicon-link"><h3>TORUS</h3></span></a>
+Maps a bidimensional domainto a toroidal surface.
+
+<div class="highlight"><pre><code class="javascript">
+<span class="kd">var</span> <span class="nx">TORUS</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">R</span><span class="p">,</span> <span class="nx">r</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="kd">function</span><span class="p">(</span><span class="nx">v</span><span class="p">)</span> <span class="p">{</span>
+		<span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">v</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+		<span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">v</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+		<span class="kd">var</span> <span class="nx">u</span> <span class="o">=</span> <span class="p">(</span><span class="nx">r</span> <span class="o">*</span> <span class="nx">COS</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="o">+</span> <span class="nx">R</span><span class="p">)</span> <span class="o">*</span> <span class="nx">COS</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span>
+		<span class="kd">var</span> <span class="nx">v</span> <span class="o">=</span> <span class="p">(</span><span class="nx">r</span> <span class="o">*</span> <span class="nx">COS</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="o">+</span> <span class="nx">R</span><span class="p">)</span> <span class="o">*</span> <span class="nx">SIN</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span>
+		<span class="kd">var</span> <span class="nx">w</span> <span class="o">=</span> <span class="nx">r</span> <span class="o">*</span> <span class="nx">SIN</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>
+		<span class="k">return</span> <span class="p">[</span><span class="nx">u</span><span class="p">,</span> <span class="nx">v</span><span class="p">,</span> <span class="nx">w</span><span class="p">];</span>
+	<span class="p">}</span>
+<span class="p">};</span></code></pre></div>
+
+
+<a name="mkrect" class="anchor" href="#mkrect"><span class="octicon octicon-link"><h3>MKRECT</h3></span></a>
+Given the absence of the PyPlasm's function MKPOL in Plasm.js, this function generate quads that can be assembled to create more complex shapes.
+
+<div class="highlight"><pre><code class="javascript">
+<span class="kd">var</span> <span class="nx">MKRECT</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">points</span><span class="p">)</span> <span class="p">{</span>
+	<span class="cm">/**</span>
+<span class="cm">	 * given four verts, create a rect</span>
+<span class="cm">	 **/</span>
+	<span class="k">return</span> <span class="nx">MAP</span><span class="p">(</span><span class="nx">BEZIER</span><span class="p">(</span><span class="nx">S1</span><span class="p">)([</span><span class="nx">BEZIER</span><span class="p">(</span><span class="nx">S0</span><span class="p">)([</span><span class="nx">points</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="nx">points</span><span class="p">[</span><span class="mi">1</span><span class="p">]]),</span><span class="nx">BEZIER</span><span class="p">(</span><span class="nx">S0</span><span class="p">)([</span><span class="nx">points</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="nx">points</span><span class="p">[</span><span class="mi">3</span><span class="p">]])]))(</span><span class="nx">PROD1x1</span><span class="p">([</span><span class="nx">INTERVALS</span><span class="p">(</span><span class="mi">1</span><span class="p">)(</span><span class="mi">1</span><span class="
+p">),</span> <span class="nx">INTERVALS</span><span class="p">(</span><span class="mi">1</span><span class="p">)(</span><span class="mi">1</span><span class="p">)]));</span>
+<span class="p">};</span>
+</code></pre></div>
+
+
+
+
+
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Cvdlab final-project maintained by <a href="https://github.com/francesco-dipi">francesco-dipi</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>

@@ -2,6 +2,7 @@
 <html>
 
   <head>
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js' ></script>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="Cvdlab final-project : Interior design products - George Nelson" />
@@ -15,12 +16,27 @@
 
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
-        <header class="inner">
+        <header class="inner" style="padding: 50px 10px 0px;"   >
           <a id="forkme_banner" href="https://github.com/francesco-dipi/cvdlab_final-project">View on GitHub</a>
 
-          <h1 id="project_title">Cvdlab final-project</h1>
-          <h2 id="project_tagline">Interior design products - George Nelson</h2>
-
+          <h1 id="project_title">George Nelson Design</h1>
+          <h2 id="project_tagline">Computational Graphic - final project | Francesco Di Paolo 413937</h2>
+          </header><header>
+          <span style="text-align: center">
+          <h4>
+          <ul class="nav-fade">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="nelson.html">George Nelson</a></li>
+            <li><a href="lamp.html">Cigar Lamp</a></li>
+            <li><a href="sofa.html">Marshmallow Sofa</a></li>
+            <li><a href="bench.html">Platform Bench</a></li>
+            <li><a href="clock.html">Sunflower Clock</a></li>
+            <li><a href="scene.html">Composition</a></li>
+            <li><a href="util.html">Util Functions</a></li>
+          </ul>
+          </h4>
+          </span>
+          </header><header class="inner" style="padding: 0px 10px 30px;">
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/francesco-dipi/cvdlab_final-project/zipball/master">Download this project as a .zip file</a>
               <a class="tar_download_link" href="https://github.com/francesco-dipi/cvdlab_final-project/tarball/master">Download this project as a tar.gz file</a>
@@ -32,24 +48,116 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h1>
-<a name="interior-design-works-by-george-nelson" class="anchor" href="#interior-design-works-by-george-nelson"><span class="octicon octicon-link"></span></a>Interior design works by <a href="http://en.wikipedia.org/wiki/George_Nelson_(designer">George Nelson</a>)</h1>
+<a name="interior-design-works-by-george-nelson" class="anchor" href="#interior-design-works-by-george-nelson"><span class="octicon octicon-link"></span></a>Interior design works by <a href="http://en.wikipedia.org/wiki/George_Nelson_(designer)">George Nelson</a></h1>
 
-<h2>
-<a name="francesco-di-paolo---413937" class="anchor" href="#francesco-di-paolo---413937"><span class="octicon octicon-link"></span></a>Francesco Di Paolo - 413937</h2>
+<h2 style="text-align: center;">
+<a name="francesco-di-paolo---413937" class="anchor" href="#francesco-di-paolo---413937"><span class="octicon octicon-link"></span></a>Francesco Di Paolo - 413937<br></h2>
 
 <h3>
-<a name="in-this-page-is-illustrated-the-final-project-for-the-computational-graphics-course-consisting-in-the-digital-representation-of-interior-design-products-made-by-designer-george-nelson" class="anchor" href="#in-this-page-is-illustrated-the-final-project-for-the-computational-graphics-course-consisting-in-the-digital-representation-of-interior-design-products-made-by-designer-george-nelson"><span class="octicon octicon-link"></span></a>In this page is illustrated the final project for the <a href="https://github.com/cvdlab-cg">computational graphics course</a>, consisting in the digital representation of interior design products made by designer George Nelson</h3>
+<a name="introduction" class="anchor" href="#introduction"><span class="octicon octicon-link"></span></a>Introduction</h3>
+
+<a name="in-this-page-is-illustrated-the-final-project-for-the-computational-graphics-course-consisting-in-the-digital-representation-of-interior-design-products-made-by-designer-george-nelson" class="anchor" href="#in-this-page-is-illustrated-the-final-project-for-the-computational-graphics-course-consisting-in-the-digital-representation-of-interior-design-products-made-by-designer-george-nelson"><span class="octicon octicon-link"></span></a>In this page is illustrated the final project for the <a href="https://github.com/cvdlab-cg">computational graphics course</a>, consisting in the digital representation of interior design products made by designer George Nelson<br><br>
 
 <hr><h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a name="overview" class="anchor" href="#overview"><span class="octicon octicon-link"></span></a>Overview</h3>
 
+Click on the images above to learn more about the designer or the geometric modeling of the products.
+
+<!-- The images above show the products realized, place the mouse over pictures to show the PLaSM model, click on them to learn more! -->
+<hr>
+
+<!--
 <p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
 
 <h3>
 <a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
 
 <p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+-->
 
+
+
+<script type='text/javascript'>
+$(document).ready(function(){
+
+$("img.a").hover(
+function() {
+$(this).stop().animate({"opacity": "0"}, "slow");
+},
+function() {
+$(this).stop().animate({"opacity": "1"}, "slow");
+});
+
+$("img.big").hover(
+function() {
+$(this).stop().animate({"opacity": "0.5"}, "slow");
+},
+function() {
+$(this).stop().animate({"opacity": "1"}, "slow");
+});
+
+});
+</script>
+<style>
+div.fadehover {
+	position: relative;
+	}
+
+img.a {
+	position: relative;
+	left: 0;
+	top: 0;
+        z-index: 10;
+	}
+.nav-fade li {
+/*    background: #fff; */
+   font-size: 16px;
+   color: rgb(150, 150, 150);
+   max-width: 800px;
+   padding: 3px 8px;
+   display: inline-block;
+   transition: background .45s ease-in-out;
+   -moz-transition: background .45s ease-in-out;
+   -webkit-transition: background .45s ease-in-out;
+   }
+
+.nav-fade li:hover {
+      background: #f2f2f2;
+/*       background: #212121; */
+      }
+            
+</style>
+
+<div class="fadehover" style="height: 350px; width: 642px; border: 1px solid black; float: right" ><a href="nelson.html">
+<img src="images/Photos/NelsonPhoto.jpeg" alt="George Nelson" class="big" style="padding: 0px; margin: 0px 0px; border: 0px" /></a>
+</div>
+
+<div class="fadehover" style="background-image: url(images/ScreenShots/LampPLaSM.jpeg); height: 350px; width: 320px; border: 1px solid black; float: left" ><a href="lamp.html">
+<img src="images/Photos/LampPhoto.jpeg" alt="Cigar Lamp" class="a" style="padding: 0px; margin: 0px 0px; border: 0px" /></a>
+</div>
+
+<div class="fadehover" style="background-image: url(images/ScreenShots/SofaPLaSM.jpeg); height: 350px; width: 320px; border: 1px solid black; float: right" ><a href="sofa.html">
+<img src="images/Photos/SofaPhoto.jpeg" alt="Marshmallow Sofa" class="a" style="padding: 0px; margin: 0px 0px; border: 0px" /></a>
+</div>
+
+<div class="fadehover" style="background-image: url(images/ScreenShots/BenchPLaSM.jpeg); height: 350px; width: 320px; border: 1px solid black; float: left" ><a href="bench.html">
+<img src="images/Photos/BenchPhoto.jpeg" alt="Platform Bench" class="a" style="padding: 0px; margin: 0px 0px; border: 0px" /></a>
+</div>
+
+<div class="fadehover" style="background-image: url(images/ScreenShots/ClockPLaSM.jpeg); height: 350px; width: 320px; border: 1px solid black; float: right" ><a href="clock.html">
+<img src="images/Photos/ClockPhoto.jpeg" alt="Sunflower Clock" class="a" style="padding: 0px; margin: 0px 0px; border: 0px" /></a>
+</div>
+
+<div class="fadehover" style="height: 350px; width: 642px; border: 1px solid black; float: right" ><a href="scene.html">
+<img src="images/ScreenShots/ScenePLaSM.jpeg" alt="Scene" class="big" style="padding: 0px; margin: 0px 0px; border: 0px" /></a>
+</div>
+
+<div>
+<hr>
+For each piece of furniture has been created a protoype using <a href="https://github.com/plasm-language/pyplasm">PyPlasm</a> and the final model with <a href="http://cvdlab.github.io/plasm.js/">Plasm.js</a>.
+</div>
+
+<!--
 <h3>
 <a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
 
@@ -59,6 +167,7 @@
 <a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
 
 <p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+-->
       </section>
     </div>
 

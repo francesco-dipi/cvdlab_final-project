@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js' ></script>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Cvdlab final-project : Interior design products - George Nelson" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+
+<script type='text/javascript'>
+$(document).ready(function(){
+
+$("img.a").hover(
+function() {
+$(this).stop().animate({"opacity": "0"}, "slow");
+},
+function() {
+$(this).stop().animate({"opacity": "1"}, "slow");
+});
+
+$("img.big").hover(
+function() {
+$(this).stop().animate({"opacity": "0.5"}, "slow");
+},
+function() {
+$(this).stop().animate({"opacity": "1"}, "slow");
+});
+
+});
+</script>
+<style>
+div.fadehover {
+	position: relative;
+	}
+
+img.a {
+	position: relative;
+	left: 0;
+	top: 0;
+        z-index: 10;
+	}
+.nav-fade li {
+/*    background: #fff; */
+   font-size: 16px;
+   color: rgb(150, 150, 150);
+   max-width: 800px;
+   padding: 3px 8px;
+   display: inline-block;
+   transition: background .45s ease-in-out;
+   -moz-transition: background .45s ease-in-out;
+   -webkit-transition: background .45s ease-in-out;
+   }
+
+.nav-fade li:hover {
+      background: #f2f2f2;
+/*       background: #212121; */
+      }
+            
+</style>
+
+
+<title>Cvdlab final-project | Sunflower Clock</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner" style="padding: 50px 10px 0px;"   >
+          <a id="forkme_banner" href="https://github.com/francesco-dipi/cvdlab_final-project">View on GitHub</a>
+
+          <h1 id="project_title">George Nelson Design</h1>
+          <h2 id="project_tagline">Computational Graphic - final project | Francesco Di Paolo 413937</h2>
+          </header><header>
+          <span style="text-align: center">
+          <h4>
+          <ul class="nav-fade">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="nelson.html">George Nelson</a></li>
+            <li><a href="lamp.html">Cigar Lamp</a></li>
+            <li><a href="sofa.html">Marshmallow Sofa</a></li>
+            <li><a href="bench.html">Platform Bench</a></li>
+            <li><a href="clock.html">Sunflower Clock</a></li>
+            <li><a href="scene.html">Composition</a></li>
+            <li><a href="util.html">Util Functions</a></li>
+          </ul>
+          </h4>
+          </span>
+          </header><header class="inner" style="padding: 0px 10px 30px;">
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/francesco-dipi/cvdlab_final-project/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/francesco-dipi/cvdlab_final-project/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<!--<a name="interior-design-works-by-george-nelson" class="anchor" href="#interior-design-works-by-george-nelson"><span class="octicon octicon-link"></span></a>Interior design works by <a href="http://en.wikipedia.org/wiki/George_Nelson_(designer)">George Nelson</a></h1>
+
+<h2 style="text-align: center;">
+<a name="francesco-di-paolo---413937" class="anchor" href="#francesco-di-paolo---413937"><span class="octicon octicon-link"></span></a>Francesco Di Paolo - 413937<br></h2>-->
+
+<h2>
+<a name="sunflower-clock" class="anchor" href="#sunflower-clock"><span class="octicon octicon-link"></span></a>Sunflower Clock</h2>
+
+
+<strong>Measurements:</strong><br><br>
+Diameter 29.5" D 3"<br>
+<hr>
+
+Designed in the 1950s, George Nelson's clocks were highly successful both as popular consumer products and icons of high design. One of the most original American designers, Nelson used pure color and bold graphic forms to make a statement still as compelling today as it was half a century ago.
+
+<img alt="Sunflower Clock" src="images/Photos/SunflowerClock.jpg"/>
+
+
+<h3>Modeling</h3>
+The <strong>petals</strong> of the clock are created from a curve in the shape of a half petal.<br>
+The curve is then extruded and <a href="util.html#mirror">mirrored</a> to create a single petal, that is finally dulpicated and rotated using <a href="util.html#duplrot">DUPLIROT</a>.
+<br>
+
+<div class="fadehover" style="background-image: url(images/ScreenShots/ClockHalfPetalPlasmJs320.jpeg); height: 350px; width: 320px; border: 1px solid black; float: left" ><a href="images/ScreenShots/ClockPetal1PlasmJs.jpeg">
+<img src="images/ScreenShots/ClockPetalCurvePlasmJs320.jpeg" alt="Cigar Lamp Base" class="a" style="padding: 0px; margin: 0px 0px; border: 0px" /></a>
+</div>
+
+<a href="images/ScreenShots/ClockPetalPlasmJs.jpeg">
+<div class="fadehover" style="background-image: url(images/ScreenShots/ClockPetalPlasmJs320.jpeg); height: 350px; width: 320px; border: 1px solid black; float: right" >
+</div></a>
+<br>
+
+
+<a href="images/ScreenShots/ClockPetalsPlasmJs.jpeg">
+<div class="fadehover" style="background-image: url(images/ScreenShots/ClockPetalsPlasmJs320.jpeg); height: 350px; width: 320px; border: 1px solid black; float: left" ></div></a>
+
+<a href="images/ScreenShots/ClockPetalsPyPlasmWire.jpeg">
+<div class="fadehover" style="background-image: url(images/ScreenShots/ClockPetalsPyPlasmWire320.jpeg); height: 350px; width: 320px; border: 1px solid black; float: right" >
+</div></a>
+<br>
+
+The <strong>clock center</strong> is created using both <a href="util.html#rotatational_solid">ROTATIONAL_SOLID</a> and ROTATIONAL_SURFACE.
+<br>
+
+<a href="images/ScreenShots/ClockCenterPlasmJs.jpeg">
+<div class="fadehover" style="background-image: url(images/ScreenShots/ClockCenterPlasmJs320.jpeg); height: 350px; width: 320px; border: 1px solid black; float: left" ></div></a>
+
+<a href="images/ScreenShots/ClockCenterPyPlasmWire.jpeg">
+<div class="fadehover" style="background-image: url(images/ScreenShots/ClockCenterPyPlasmWire320.jpeg); height: 350px; width: 320px; border: 1px solid black; float: right" >
+</div></a>
+<br>
+
+
+The <strong>clock's hands</strong> are generated using <a href="util.html#mkrect">MKRECT</a> and BEZIER.
+<br>
+
+<a href="images/ScreenShots/ClockHourHandPyPlasm.jpeg">
+<div class="fadehover" style="background-image: url(images/ScreenShots/ClockHourHandPyPlasm320.jpeg); height: 350px; width: 320px; border: 1px solid black; float: left" ></div></a>
+
+<a href="images/ScreenShots/ClockMinuteHandPyPlasm.jpeg">
+<div class="fadehover" style="background-image: url(images/ScreenShots/ClockMinuteHandPyPlasm320.jpeg); height: 350px; width: 320px; border: 1px solid black; float: right" >
+</div></a>
+<br>
+
+<a href="images/ScreenShots/ClockHandsPyPlasm.jpeg">
+<div class="fadehover" style="background-image: url(images/ScreenShots/ClockHandsPyPlasm320.jpeg); height: 350px; width: 320px; border: 1px solid black; float: left" ></div></a>
+
+<a href="images/ScreenShots/ClockHandsPlasmJs.jpeg">
+<div class="fadehover" style="background-image: url(images/ScreenShots/ClockHandsPlasmJs320.jpeg); height: 350px; width: 320px; border: 1px solid black; float: right" >
+</div></a>
+<br>
+
+<h3>Model</h3>
+
+
+<a href="images/ScreenShots/Clock1PlasmJs.jpeg" ><img src="images/ScreenShots/Clock1PlasmJs.jpeg"></a>
+<a href="images/ScreenShots/ClockPyPlasmWire.jpeg" ><img src="images/ScreenShots/ClockPyPlasmWire.jpeg"></a>
+<a href="images/ScreenShots/ClockPlasmJs.jpeg" ><img src="images/ScreenShots/ClockPlasmJs.jpeg"></a>
+<a href="images/ScreenShots/ClockDetailsPyPlasmWire.jpeg" ><img src="images/ScreenShots/ClockDetailsPyPlasmWire.jpeg"></a>
+<a href="images/ScreenShots/ClockDetailsPlasmJs.jpeg" ><img src="images/ScreenShots/ClockDetailsPlasmJs.jpeg"></a>
+
+
+
+
+<h3>Code</h3>
+<ul>
+<li>Plasm.js code - show model
+<li>PyPlasm code
+</ul>
+
+
+
+
+
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Cvdlab final-project maintained by <a href="https://github.com/francesco-dipi">francesco-dipi</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>

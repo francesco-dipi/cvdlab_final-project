@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js' ></script>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Cvdlab final-project : Interior design products - George Nelson" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+
+<script type='text/javascript'>
+$(document).ready(function(){
+
+$("img.a").hover(
+function() {
+$(this).stop().animate({"opacity": "0"}, "slow");
+},
+function() {
+$(this).stop().animate({"opacity": "1"}, "slow");
+});
+
+$("img.big").hover(
+function() {
+$(this).stop().animate({"opacity": "0.5"}, "slow");
+},
+function() {
+$(this).stop().animate({"opacity": "1"}, "slow");
+});
+
+});
+</script>
+<style>
+div.fadehover {
+	position: relative;
+	}
+
+img.a {
+	position: relative;
+	left: 0;
+	top: 0;
+        z-index: 10;
+	}
+.nav-fade li {
+/*    background: #fff; */
+   font-size: 16px;
+   color: rgb(150, 150, 150);
+   max-width: 800px;
+   padding: 3px 8px;
+   display: inline-block;
+   transition: background .45s ease-in-out;
+   -moz-transition: background .45s ease-in-out;
+   -webkit-transition: background .45s ease-in-out;
+   }
+
+.nav-fade li:hover {
+      background: #f2f2f2;
+/*       background: #212121; */
+      }
+            
+</style>
+
+
+<title>Cvdlab final-project | Marshmallow Sofa</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner" style="padding: 50px 10px 0px;"   >
+          <a id="forkme_banner" href="https://github.com/francesco-dipi/cvdlab_final-project">View on GitHub</a>
+
+          <h1 id="project_title">George Nelson Design</h1>
+          <h2 id="project_tagline">Computational Graphic - final project | Francesco Di Paolo 413937</h2>
+          </header><header>
+          <span style="text-align: center">
+          <h4>
+          <ul class="nav-fade">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="nelson.html">George Nelson</a></li>
+            <li><a href="lamp.html">Cigar Lamp</a></li>
+            <li><a href="sofa.html">Marshmallow Sofa</a></li>
+            <li><a href="bench.html">Platform Bench</a></li>
+            <li><a href="clock.html">Sunflower Clock</a></li>
+            <li><a href="scene.html">Composition</a></li>
+            <li><a href="util.html">Util Functions</a></li>
+          </ul>
+          </h4>
+          </span>
+          </header><header class="inner" style="padding: 0px 10px 30px;">
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/francesco-dipi/cvdlab_final-project/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/francesco-dipi/cvdlab_final-project/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<!--<a name="interior-design-works-by-george-nelson" class="anchor" href="#interior-design-works-by-george-nelson"><span class="octicon octicon-link"></span></a>Interior design works by <a href="http://en.wikipedia.org/wiki/George_Nelson_(designer)">George Nelson</a></h1>
+
+<h2 style="text-align: center;">
+<a name="francesco-di-paolo---413937" class="anchor" href="#francesco-di-paolo---413937"><span class="octicon octicon-link"></span></a>Francesco Di Paolo - 413937<br></h2>-->
+
+<h2>
+<a name="marshmallow-sofa" class="anchor" href="#marshmallow-sofa"><span class="octicon octicon-link"></span></a>Marshmallow Sofa</h2>
+<!-- <h3>Marshmallow Sofa</h3> -->
+
+<strong>Measurements:</strong><br>
+H 31" D 29" W 52" Seat H 16"<br>
+<br>
+<hr>
+
+
+If only all design <em>"failures"</em> were so successful. The inspiration for the Nelson Marshmallow Sofa (1956) was launched when an inventor approached George Nelson and Irving Harper with a planned "self-skinned" injection plastic disc that would be inexpensive to produce and unerringly durable. As the proposed cushions had a maximum diameter of 12", the designers perched 18 of them atop a steel frame.
+Sadly, the inventor's vision for high-resiliency, low-cost cushions never came to fruition, but the design was so compelling that Herman Miller chose to produce it anyway. Designed with both residential and commercial applications in mind, the cushions are detachable for easy cleaning and therefore interchangeable to equalize wear. The atom-like appearance of the Marshmallow Sofa is a precursor to the aesthetic style of the pop art of the 1960s. George Nelson's iconic sofa makes an enduring statement. Eighteen round cushions covered in sleek black vinyl appear to float over a tubular brushed steel frame.
+<br>
+In recent years it has become known that many of the designs George Nelson accepted credit for were actually the work of other designers employed at his studios. Examples of this include the Marshmallow sofa, which was actually designed by Irving Harper, and the Action Office, for which Nelson won the prestigious Alcoa Award, neglecting to mention that it was largely designed by Robert Propst. John Pile, a designer who worked for Nelson in the 1950s, commented about this practice; <em>"George's attitude was that it was okay for individual designers to be given credit in trade publications, but for the consumer world, the credit should always be to the firm, not the individual. He didn't always follow through on that policy though."</em>
+
+
+<img alt="Marshmallow Sofa" src="images/Photos/MarshmallowSofa.jpg"/>
+<!-- <blockquote>“”</blockquote> -->
+
+
+<h3>Modeling</h3>
+This model is the more complex and challenging item of the entire set, it is composed by a large number of parts.<br>
+<br><hr>
+The <strong>upper part </strong> of the pillow is generated rotating a NUBS curve using the ROTATIONAL_SURFACE function.<br>
+
+<a href="images/ScreenShots/SofaPillow1PlasmJs.jpeg">
+<div class="fadehover" style="background-image: url(images/ScreenShots/SofaPillow1PlasmJs320.jpeg); height: 350px; width: 320px; border: 1px solid black; float: left" ></div></a>
+
+<a href="images/ScreenShots/SofaPillow1PyPlasm.jpeg">
+<div class="fadehover" style="background-image: url(images/ScreenShots/SofaPillow1PyPlasm320.jpeg); height: 350px; width: 320px; border: 1px solid black; float: right" >
+</div>
+</a>
+
+<br>
+The <strong>metal base</strong> of the pillow has been created using the function <a href="util.html#rotational_solid">ROTATIONAL_SOLID</a> starting from the profile points.
+<br>
+
+<a href="images/ScreenShots/SofaPillow2PlasmJs.jpeg">
+<div class="fadehover" style="background-image: url(images/ScreenShots/SofaPillow2PlasmJs320.jpeg); height: 350px; width: 320px; border: 1px solid black; float: left" ></div></a>
+
+<a href="images/ScreenShots/SofaPillow2PyPlasm.jpeg">
+<div class="fadehover" style="background-image: url(images/ScreenShots/SofaPillow2PyPlasm320.jpeg); height: 350px; width: 320px; border: 1px solid black; float: right" >
+</div>
+</a>
+<br>
+The function <code>pillowRow(numberOfPillows)</code> create rows of pillow with an alternated color.
+
+
+<br>
+<ul><li>Structure</li></ul>
+The <strong>structure</strong> of the sofa is composed of various elements:
+<br>
+
+<a href="images/ScreenShots/SofaStructure1PyPlasm.jpeg">
+<div class="fadehover" style="background-image: url(images/ScreenShots/SofaStructure1PyPlasm320.jpeg); height: 350px; width: 320px; border: 1px solid black; float: left" ></div></a>
+
+<a href="images/ScreenShots/SofaStructure23PyPlasm.jpeg">
+<div class="fadehover" style="background-image: url(images/ScreenShots/SofaStructure23PyPlasm320.jpeg); height: 350px; width: 320px; border: 1px solid black; float: right" >
+</div>
+</a>
+<br>
+<a href="images/ScreenShots/SofaStructure4PyPlasm.jpeg">
+<div class="fadehover" style="background-image: url(images/ScreenShots/SofaStructure4PyPlasm320.jpeg); height: 350px; width: 320px; border: 1px solid black; float: left" ></div></a>
+
+<a href="images/ScreenShots/SofaFootPyPlasm.jpeg">
+<div class="fadehover" style="background-image: url(images/ScreenShots/SofaFootPyPlasm320.jpeg); height: 350px; width: 320px; border: 1px solid black; float: right" >
+</div>
+</a>
+<br>
+
+<a href="images/ScreenShots/SofaStructurePlasmJs.jpeg">
+<div class="fadehover" style="background-image: url(images/ScreenShots/SofaStructurePlasmJs320.jpeg); height: 350px; width: 320px; border: 1px solid black; float: left" ></div></a>
+
+<a href="images/ScreenShots/SofaStructurePyPlasm.jpeg">
+<div class="fadehover" style="background-image: url(images/ScreenShots/SofaStructurePyPlasm320.jpeg); height: 350px; width: 320px; border: 1px solid black; float: right" >
+</div>
+</a>
+<br>
+
+The curved part of the structure has been made mapping the <a href="util.html#torus">TORUS</a> function to an appropriated domain.
+
+
+<h3>Model</h3>
+<a href="images/ScreenShots/SofaFrontPlasmJs.jpeg" ><img src="images/ScreenShots/SofaFrontPlasmJs.jpeg"></a>
+<a href="images/ScreenShots/SofaFrontPyPlasmWire.jpeg" ><img src="images/ScreenShots/SofaFrontPyPlasmWire.jpeg"></a>
+<a href="images/ScreenShots/SofaBackPlasmJs.jpeg" ><img src="images/ScreenShots/SofaBackPlasmJs.jpeg"></a>
+<a href="images/ScreenShots/SofaBackPyPlasmWire.jpeg" ><img src="images/ScreenShots/SofaBackPyPlasmWire.jpeg"></a>
+<a href="images/ScreenShots/SofaDetailsPlasmJs.jpeg" ><img src="images/ScreenShots/SofaDetailsPlasmJs.jpeg"></a>
+<a href="images/ScreenShots/SofaDetailsPyPlasm.jpeg" ><img src="images/ScreenShots/SofaDetailsPyPlasm.jpeg"></a>
+
+
+
+
+<h3>Code</h3>
+<ul>
+<li>Plasm.js code - show model
+<li>PyPlasm code
+</ul>
+
+
+
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Cvdlab final-project maintained by <a href="https://github.com/francesco-dipi">francesco-dipi</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
